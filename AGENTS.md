@@ -25,7 +25,7 @@ You are helping a beginner build a personal website. After each step, explain wh
 - The server code goes in `api/chat.js`, a Vercel Function using `export async function POST(request)`.
 - Return JSON from the function using `Response.json(...)`.
 - Use the official `@anthropic-ai/sdk` package. It is already in `package.json`, so do not change its version.
-- Create the client with `new Anthropic()`, inside the function, so it reads `ANTHROPIC_API_KEY` from the environment.
+- Create the client with `new Anthropic()`, inside the function. It reads `ANTHROPIC_API_KEY` and `ANTHROPIC_BASE_URL` from the environment by itself, so do not pass them in or hard-code them.
 - Use exactly this model ID: `claude-haiku-5-5`. Do not change it.
 - Set `max_tokens` to 1024 and `output_config` to `{ effort: "low" }`.
 - Do not send `temperature`, `top_p`, `top_k` or `thinking`.
